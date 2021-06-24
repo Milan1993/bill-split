@@ -1,9 +1,10 @@
-import RegisterForm from './components/RegisterForm'
+import RegisterForm from './components/RegisterForm';
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
     <div className="App">
-      <RegisterForm />
+      <Dashboard/>
     </div>
   );
 }
