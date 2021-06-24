@@ -5,7 +5,6 @@ const Dashboar = () => {
   return (
     <>
       <Header />
-      <RegisterForm />
     </>
   );
 };

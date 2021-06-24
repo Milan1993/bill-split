@@ -1,39 +1,45 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import { ReactComponent as ReactLogo } from "../images/stopwatch.svg";
-
-const HeaderContainer = styled.header`
-  background: linear-gradient(to right, #318f94 0, #5ec58c 100%);
-`;
+import Logo from "./Logo";
+import Search from "./Search";
+import Avatar from "./Avatar";
 
 const Nav = styled.nav`
-  display: flex;
   max-width: 1300px;
   margin: 0 auto;
-  color: white;
-  gap: 10px;
   min-height: 70px;
+  display: flex;
   align-items: center;
+
+  ul {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    list-style: none;
+
+    .search { margin-left: auto; }
+  }
 `;
 
-const Logo = styled(ReactLogo)`
-  width: 35px;
-  fill: white;
-  vertical-align: middle;
-`;
 const Header = () => {
   return (
-    <HeaderContainer>
+    <header style={{ background: 'linear-gradient(to right, #318f94 0, #5ec58c 100%)'}}>
       <Nav>
-        <div>
-          <Logo />
-        </div>
-        <div>Search</div>
-        <div>Notifications</div>
-        <div>Profile circle</div>
-        <div>Localisation</div>
+        <ul>
+          <li>
+            <Logo />
+          </li>
+          <li className="search">
+            <Search />
+          </li>
+          <li><Avatar/></li>
+        </ul>
       </Nav>
-    </HeaderContainer>
+    </header>
   );
 };
 
